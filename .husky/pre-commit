@@ -1,4 +1,23 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn lint && yarn format
+# Run linting
+yarn lint
+
+# If linting fails, exit with error code
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Aborting commit."
+  exit 1
+fi
+
+# Run formatting
+yarn format
+
+# If formatting fails, exit with error code
+if [ $? -ne 0 ]; then
+  echo "Formatting failed. Aborting commit."
+  exit 1
+fi
+
+# Stage changes if formatting succeeds
+git add -u
