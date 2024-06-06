@@ -1,6 +1,6 @@
 import { screen, render } from '@testing-library/react'
 import { Application } from './application'
-import { log } from 'console'
+// import { log } from 'console'
 
 describe('Application', () => {
   test('renders correctly', () => {
@@ -47,8 +47,8 @@ describe('Application', () => {
     expect(nameElement3).toBeInTheDocument()
 
     const nameElement4 = screen.getByDisplayValue('Mix')
-    const inputNameValue = nameElement4.getAttribute('value')
-    log('input value is: ', inputNameValue)
+    // const inputNameValue = nameElement4.getAttribute('value')
+    // log('input value is: ', inputNameValue)
 
     expect(nameElement4).toBeInTheDocument()
 

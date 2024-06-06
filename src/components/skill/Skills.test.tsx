@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { Skills } from './Skills'
-import { logRoles } from '@testing-library/react'
+// import { logRoles } from '@testing-library/react'
 
 describe('Skills', () => {
   const skills = ['HTML', 'CSS', 'JavaScript']
@@ -34,8 +34,9 @@ describe('Skills', () => {
   })
 
   test('Start Learning button is eventually displayed', async () => {
-    const view = render(<Skills skills={skills} />)
-    logRoles(view.container)
+    render(<Skills skills={skills} />)
+    // const view = render(<Skills skills={skills} />)
+    // logRoles(view.container)
     // wait for element appear or disappear in responese of event, user action, timeout or promise
     // "findby" return promise which results when an element is found
     // rejected if not found or exceed timeout (default 1000)
