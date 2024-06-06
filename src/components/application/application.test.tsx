@@ -12,8 +12,16 @@ describe("Application", () => {
         const sectionHeading = screen.getByRole('heading', { level: 2 })
         expect(sectionHeading).toBeInTheDocument()
 
-        const paragraphElement = screen.getByText('All fields are mandatory')
+        const paragraphElement = screen.getByText(/All fields are/)
         expect(paragraphElement).toBeInTheDocument()
+
+        const paragraphElement2 = screen.getByText('All fields are', { exact: false })
+        expect(paragraphElement2).toBeInTheDocument()
+
+        const paragraphElement3 = screen.getByText((content, element) => {
+            return element?.tagName.toLowerCase() === 'p' && content.includes('All fields are')
+        })
+        expect(paragraphElement3).toBeInTheDocument()
 
         const closeElement = screen.getByTitle('close')
         expect(closeElement).toBeInTheDocument()
@@ -35,7 +43,7 @@ describe("Application", () => {
 
         const nameElement4 = screen.getByDisplayValue('Mix')
         const inputNameValue = nameElement4.getAttribute('value')
-        log("input value is: ",inputNameValue)
+        log("input value is: ", inputNameValue)
         expect(nameElement4).toBeInTheDocument()
 
         const bioElement = screen.getByRole('textbox', { name: 'Bio', })

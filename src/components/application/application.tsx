@@ -10,7 +10,7 @@ export const Application = () => {
             <form>
                 <div>
                     <label htmlFor="name">Name</label>
-                    <input type="text" id='name' placeholder="Fullname" value={"Mix"} />
+                    <input type="text" id='name' placeholder="Fullname" onChange={()=>{}} value={"Mix"} />
                 </div>
                 <div>
                     <label htmlFor="bio">Bio</label>
