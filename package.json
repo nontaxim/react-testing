@@ -67,6 +67,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest-dom": "^5.4.0",
     "husky": "^8.0.0",
