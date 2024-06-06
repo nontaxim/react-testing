@@ -72,5 +72,13 @@
     "msw": "^2.3.1",
     "prettier": "3.3.1",
     "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
+    "*.{ts,tsx,css,scss}": [
+      "prettier --write"
+    ]
   }
 }
