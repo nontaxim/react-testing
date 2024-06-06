@@ -50,7 +50,7 @@ describe('Application', () => {
     const inputNameValue = nameElement4.getAttribute('value')
     log('input value is: ', inputNameValue)
 
-    expect(nameElement4).toBeInTheDocument()
+                  expect(nameElement4).toBeInTheDocument()
 
     const bioElement = screen.getByRole('textbox', { name: 'Bio' })
     expect(bioElement).toBeInTheDocument()
