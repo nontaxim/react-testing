@@ -46,8 +46,8 @@ describe('Application', () => {
     const nameElement3 = screen.getByPlaceholderText('Fullname')
     expect(nameElement3).toBeInTheDocument()
 
-    const nameElement4 = screen.getByDisplayValue('Mix')
-    const inputNameValue = nameElement4.getAttribute('value')
+            const nameElement4 = screen.getByDisplayValue('Mix')
+                                    const inputNameValue = nameElement4.getAttribute('value')
     log('input value is: ', inputNameValue)
 
     expect(nameElement4).toBeInTheDocument()
