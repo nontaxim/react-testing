@@ -13,9 +13,9 @@
 import { ReadableStream } from 'node:stream/web'
 
 if (globalThis.ReadableStream === undefined) {
-  globalThis.ReadableStream = ReadableStream as any;
+  globalThis.ReadableStream = ReadableStream as any
 }
- 
+
 const { TextDecoder, TextEncoder } = require('node:util')
 
 Object.defineProperties(globalThis, {

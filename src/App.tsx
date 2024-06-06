@@ -1,19 +1,19 @@
-import './App.css';
+import './App.css'
 // import { Application } from './components/application/application';
 // import { Counter } from './components/counter/counter';
-// import { AppProviders } from './providers/AppProviders';
-// import { MuiMode } from './components/mui/mui-mode';
-import { Users } from './components/users/users';
+import { AppProviders } from './providers/AppProviders'
+import { MuiMode } from './components/mui/mui-mode'
+// import { Users } from './components/users/users';
 
 function App() {
   return (
-    // <AppProviders>
+    <AppProviders>
       <div className="App">
-        {/* <MuiMode /> */}
-        <Users />
+        <MuiMode />
+        {/* <Users /> */}
       </div>
-    // </AppProviders>
-  );
+    </AppProviders>
+  )
 }
 
-export default App;
+export default App
